@@ -1,0 +1,70 @@
+<!doctype html>
+ <html>
+  <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+   <title> createelement </title>
+   <style>
+   
+    .secele 
+	{
+	  border:2px solid red;
+	  width:40%;
+	  height:40vh;
+	  margin:auto;
+	  text-align:center;
+	  line-height:30px;
+	  margin-top:50px;
+	  padding-top:40px;
+	}
+	button 
+	{
+	  padding:8px;
+	  color:red;
+	  background-color:white;
+	}
+   </style>
+  
+  </head>
+  <body>
+   
+  <!--- Create a Element --->
+  
+  <!--- js --->
+  
+  <script>
+   
+   let bo=document.body;
+   console.log(bo);
+   let sec=document.createElement("section");
+   console.log(sec);
+   bo.appendChild(sec);
+   sec.setAttribute("class","secele");
+   let head=document.createElement("h1");
+   console.log(head);
+   head.innerHTML="Frond End Developer";
+   sec.appendChild(head);
+   let para=document.createElement("p");
+   console.log(para);
+   para.innerHTML="A front-end developer architects and develops websites and applications <br> using web technologies";
+   sec.appendChild(para);
+   let but=document.createElement("button");
+   console.log(but);
+   but.innerHTML="Backcolor";
+   sec.appendChild(but);
+   but.setAttribute("onclick","butfun()");
+   function butfun()
+   {
+     let r=Math.random()*256;
+	 r=Math.round(r);
+	 let g=Math.random()*256;
+	 g=Math.round(g);
+	 let b=Math.random()*256;
+	 b=Math.round(b);
+	 sec.style.backgroundColor="rgb("+r+","+g+","+b+")";
+   }
+   setInterval(butfun,1000);
+   
+  </script>
+ </body>
+</html>
